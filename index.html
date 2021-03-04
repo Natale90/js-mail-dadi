@@ -40,25 +40,38 @@
 
       //------------------------------ esercizi giorno 04/03/2021---------------------------------------------------------------------
       // 1 - Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato
-
+      //                  0                           1                      2                            3                  4
       var arr = ["mick.jagger@gmail.com", "elton.jhonn@hotmail.it", "david.bowie@gmail.com", "lennon.jhonn@gmail.uk", "keith.richard@gmail.uk"];
       var userEmail = prompt("inserisci la tua email");
 
-        for (var i=0; i < arr.length; i++) {
+      var result = "nonTrovato";
 
-          var email = arr[i];
-          console.log(i, email);
+      for (var i=0; i < arr.length; i++) {
 
-         if ( userEmail == email) {
+        var email = arr[i];
+        console.log(i, email);
 
-          document.getElementById('messaggio').innerHTML = "Welcomeback! " + userEmail;
-        } else {
+        if ( userEmail != email) {
 
-          document.getElementById('messaggio').innerHTML = "Sorry! " + userEmail + " You're not in our database";
-        }
+
+      } else {
+
+        result = "trovato";
+        console.log("okey");
+        // document.getElementById('messaggio').innerHTML = "Welcomeback! " + userEmail;
+
+      }
       }
 
+      console.log(result);
 
+      if (result == "trovato") {
+
+        document.getElementById('messaggio').innerHTML = "Welcomeback! " + userEmail;
+      } else{
+
+        document.getElementById('messaggio').innerHTML = "Sorry! " + userEmail; "not in database"
+      }
 
       //------------------------------ esercizi giorno 04/03/2021---------------------------------------------------------------------
       //2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il compute. Stabilire il vincitore, in base a chi fa il punteggio più alto.
