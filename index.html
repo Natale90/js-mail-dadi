@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Gioci in JS</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h3 id="messaggio" ></h3>
+    </div>
+
+
+    <script type="text/javascript">
+      //------------------------------ esercizi giorno 04/03/2021---------------------------------------------------------------------
+      // 1 - Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato
+      // index            0                        1                       2                           3                        4
+      var arr = ["mick.jagger@gmail.com", "elton.jhonn@hotmail.it", "david.bowie@gmail.com", "lennon.jhonn@gmail.uk", "keith.richard@gmail.uk"];
+      var userEmail = prompt("inserisci la tua email");
+
+        for (var i=0; i < arr.length; i++) {
+
+          var email = arr[i];
+          console.log(i, email);
+
+         if (email == userEmail) {
+
+          document.getElementById('messaggio').innerHTML = "Welcomeback! " + userEmail;
+        } else{
+          document.getElementById('messaggio').innerHTML = "Sorry! " + userEmail + " You're not in our database";
+        }
+      }
+    </script>
+
+  </body>
+</html>
