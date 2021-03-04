@@ -5,19 +5,42 @@
 
     <!-- link to main stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <title>Gioci in JS</title>
+    <title>Giochi in JS</title>
   </head>
   <body>
 
     <div class="container">
-      <h3 id="messaggio" ></h3>
+      <div class="card" >
+        <h1>Gioco 1</h1>
+        <h4 id="messaggio"></h4>
+      </div>
+
+      <div class="card" >
+        <h1>Gioco 2</h1>
+
+        <div class="square">
+          <h5>Player's number</h5>
+          <h4 id="player" ></h4>
+        </div>
+
+        <div class="square">
+          <h5>computer's Number</h5>
+          <h4 id="computer" ></h4>
+        </div>
+
+        <div class="square">
+          <h5> the Winner is</h5>
+          <h4 id="winner" ></h4>
+        </div>
+      </div>
     </div>
 
 
     <script type="text/javascript">
+
       //------------------------------ esercizi giorno 04/03/2021---------------------------------------------------------------------
       // 1 - Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato
-      // index            0                        1                       2                           3                        4
+
       var arr = ["mick.jagger@gmail.com", "elton.jhonn@hotmail.it", "david.bowie@gmail.com", "lennon.jhonn@gmail.uk", "keith.richard@gmail.uk"];
       var userEmail = prompt("inserisci la tua email");
 
@@ -26,13 +49,47 @@
           var email = arr[i];
           console.log(i, email);
 
-         if (email == userEmail) {
+         if ( userEmail == email) {
 
           document.getElementById('messaggio').innerHTML = "Welcomeback! " + userEmail;
-        } else{
+        } else {
+
           document.getElementById('messaggio').innerHTML = "Sorry! " + userEmail + " You're not in our database";
         }
       }
+
+
+
+      //------------------------------ esercizi giorno 04/03/2021---------------------------------------------------------------------
+      //2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il compute. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+      // var playerRnd = Math.floor(Math.random() * 6);
+      // var computerRnd = Math.floor(Math.random() * 6);
+      //
+      // document.getElementById('player').innerHTML = playerRnd;
+      // document.getElementById('computer').innerHTML = computerRnd;
+      //
+      // console.log(playerRnd, computerRnd);
+      //
+      // var winner = 0;
+      //
+      // if (playerRnd > computerRnd) {
+      //
+      //   winner = playerRnd;
+      //   console.log(playerRnd);
+      // } else if (computerRnd > playerRnd){
+      //
+      //   winner = computerRnd;
+      //   console.log(computerRnd);
+      //
+      // } else {
+      //
+      //   winner = "nobay wins this round";
+      //   console.log("nobody wins this round");
+      // }
+      //
+      // document.getElementById('winner').innerHTML = winner;
+
     </script>
 
   </body>
